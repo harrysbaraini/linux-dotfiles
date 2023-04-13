@@ -1,0 +1,17 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Vanderlei Sbaraini Amancio
+	email = hello@vanderleis.me
+	signingkey = B813773311CE9DAE
+[core]
+	autocrlf = input
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[gpg]
+	program = /usr/local/bin/gpg
