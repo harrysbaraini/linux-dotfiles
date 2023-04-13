@@ -9,7 +9,7 @@ function install() {
 yay -R --confirm xdg-desktop-portal-wlr
 
 # Install tools
-install git github-cli chezmoi
+install git github-cli chezmoi 1password slack-desktop spotify teams just zoom webex-bin bitwarden insomnia-bin obsidian
 
 install \
     # required dependencies
@@ -29,10 +29,6 @@ install \
 # Regenerate font cache
 fc-cache -rv
 
-# Copy theme
-#rsync -avxHAXP --exclude '.git*' . ~/
-cp -rT . ~/
-
-# Clone GTK theme
-git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git ~/Downloads/Gruvbox-GTK-Theme
-cp -r ~/Downloads/Gruvbox-GTK-Theme/themes/Gruvbox-Dark-BL/gtk-4.0/* ~/.config/gtk-4.0/
+# Install dotfiles
+chezmoi init https://github.com/$GITHUB_USERNAME/dotfiles.git
+chezmoi apply -v
