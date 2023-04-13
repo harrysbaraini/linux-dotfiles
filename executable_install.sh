@@ -30,5 +30,5 @@ install \
 fc-cache -rv
 
 # Install dotfiles
-chezmoi init https://github.com/$GITHUB_USERNAME/dotfiles.git
+chezmoi init https://github.com/harrysbaraini/linux-dotfiles.git
 chezmoi apply -v
