@@ -9,7 +9,7 @@ function install() {
 yay -R --confirm xdg-desktop-portal-wlr
 
 # Install tools
-install git github-cli chezmoi 1password slack-desktop spotify teams just zoom webex-bin bitwarden insomnia-bin obsidian
+install github-cli 1password slack-desktop spotify teams just zoom webex-bin bitwarden insomnia-bin obsidian
 
 install \
     # required dependencies
@@ -28,7 +28,3 @@ install \
 
 # Regenerate font cache
 fc-cache -rv
-
-# Install dotfiles
-chezmoi init https://github.com/harrysbaraini/linux-dotfiles.git
-chezmoi apply -v
